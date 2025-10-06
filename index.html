@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikantnie - Gdzie pikanteria spotyka ekskluzywność</title>
+    <meta name="description" content="Odkryj świat dyskretnych spotkań. Tylko dla wybranych.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --text-white: #ffffff;
+            --text-muted: #9ca3af;
+            --red: #dc2626;
+            --red-dark: #991b1b;
+            --gold: #FFD700;
+            --border: #2a2a2a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Gold text */
+        .gold-text {
+            color: var(--gold);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--text-white);
+            border: 2px solid var(--gold);
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+        }
+
+        .btn-lg {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: radial-gradient(circle at 50% 120%, rgba(220, 38, 38, 0.15), transparent);
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Added erotic silhouette image */
+        .hero-silhouette {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            opacity: 0.6;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.5);
+            border: 2px solid var(--gold);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Added online counter */
+        .online-counter {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            border-radius: 2rem;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+        }
+
+        .online-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .hero-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 4rem 0;
+        }
+
+        .form-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.1);
+        }
+
+        .form-card h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .form-card p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border);
+            border-radius: 0.5rem;
+            background: var(--bg-dark);
+            color: var(--text-white);
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .form-disclaimer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        /* Profiles Section */
+        .profiles-section {
+            padding: 4rem 0;
+            background: var(--bg-card);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+        }
+
+        .profiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .profile-card {
+            background: var(--bg-dark);
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .profile-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .profile-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.5);
+            border: 2px solid var(--gold);
+        }
+
+        .profile-content {
+            padding: 1.5rem;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .profile-location {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--text-white);
+            text-align: center;
+            border-top: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn-white {
+            background: var(--text-white);
+            color: var(--red);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-white:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--text-white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--text-white);
+            color: var(--red);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border: 2px solid var(--gold);
+        }
+
+        .feature h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Chat Notifications */
+        .notifications-container {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+        }
+
+        .notification {
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
+            animation: slideIn 0.3s ease-out;
+            position: relative;
+            cursor: pointer;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .notification-close {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .notification-close:hover {
+            background: var(--bg-dark);
+            color: var(--text-white);
+        }
+
+        .notification-content {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .notification-avatar {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .notification-info {
+            flex: 1;
+        }
+
+        .notification-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .notification-name {
+            font-weight: 600;
+        }
+
+        .notification-badge {
+            background: #22c55e;
+            color: var(--text-white);
+            padding: 0.125rem 0.5rem;
+            border-radius: 1rem;
+            font-size: 0.625rem;
+            font-weight: 600;
+        }
+
+        .notification-location {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .notification-message {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .notification-button {
+            width: 100%;
+            padding: 0.5rem;
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--text-white);
+            border: 2px solid var(--gold);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .notification-button:hover {
+            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .notifications-container {
+                max-width: calc(100vw - 2rem);
+                right: 1rem;
+                left: 1rem;
+            }
+
+            .profiles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-silhouette {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* Icons */
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .icon-sm {
+            width: 1rem;
+            height: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <!-- Added erotic silhouette image with proper query -->
+            <img src="/placeholder.svg?height=200&width=200" alt="Silhouette" class="hero-silhouette">
+            
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                    </svg>
+                </div>
+                <span style="font-size: 1.875rem; font-weight: 700; color: var(--text-white);">Pikantnie</span>
+            </div>
+
+            <h1>
+                <span style="background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Pikantnie</span> i <span class="gold-text">ekskluzywnie</span>
+            </h1>
+
+            <p>
+                Odkryj świat dyskretnych spotkań. Tylko dla wybranych.
+            </p>
+
+            <!-- Added online counter -->
+            <div class="online-counter">
+                <span class="online-dot"></span>
+                <span><strong id="onlineCount">1847</strong> osób online teraz</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://your-affiliate-link.com" class="btn btn-primary btn-lg">Uzyskaj dostęp</a>
+                <a href="https://your-affiliate-link.com" class="btn btn-outline btn-lg">Odkryj więcej</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--gold);">
+                        <path d="M12 2l2.09 6.26L20 9.27l-5 4.87 1.18 6.88L12 17.77l-4.18 3.25L9 14.14 4 9.27l5.91-1.01L12 2z"/>
+                    </svg>
+                    <span>Weryfikowani członkowie</span>
+                </div>
+                <div class="hero-stat">
+                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--red);">
+                        <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                    </svg>
+                    <span>Dyskretnie i <span class="gold-text">ekskluzywnie</span></span>
+                </div>
+                <div class="hero-stat">
+                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--gold);">
+                        <path d="M12 2l2.09 6.26L20 9.27l-5 4.87 1.18 6.88L12 17.77l-4.18 3.25L9 14.14 4 9.27l5.91-1.01L12 2z"/>
+                    </svg>
+                    <span>Tylko dla wybranych</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-card">
+                <h2>Rozpocznij swoją przygodę</h2>
+                <p>Wypełnij formularz i poznaj kogoś wyjątkowego już dziś</p>
+
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Imię</label>
+                        <input type="text" id="name" placeholder="Twoje imię" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Wiek</label>
+                        <input type="number" id="age" placeholder="Twój wiek" min="18" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="twoj@email.com" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem;">
+                        Dołącz teraz
+                    </button>
+
+                    <p class="form-disclaimer">
+                        Klikając "Dołącz teraz" akceptujesz nasze warunki użytkowania i potwierdzasz, że masz ukończone 18 lat
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profiles Section -->
+    <section class="profiles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>
+                    Poznaj <span style="background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">pikantne</span> single w Twojej okolicy
+                </h2>
+                <p>Setki atrakcyjnych osób czeka na Ciebie. Rozpocznij rozmowę już teraz!</p>
+            </div>
+
+            <div class="profiles-grid">
+                <!-- Profile 1 -->
+                <div class="profile-card">
+                    <div style="position: relative;">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Anna" class="profile-image">
+                        <div class="profile-badge">
+                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-name">Anna, 26</div>
+                        </div>
+                        <div class="profile-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Warszawa</span>
+                        </div>
+                        <p class="profile-description">
+                            Szukam kogoś do gorących chwil i niezapomnianych spotkań. Lubię spontaniczność i pasję.
+                        </p>
+                        <a href="https://your-affiliate-link.com" class="btn btn-primary" style="width: 100%;">
+                            Wyślij wiadomość
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile 2 -->
+                <div class="profile-card">
+                    <div style="position: relative;">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Kasia" class="profile-image">
+                        <div class="profile-badge">
+                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-name">Kasia, 24</div>
+                        </div>
+                        <div class="profile-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Kraków</span>
+                        </div>
+                        <p class="profile-description">
+                            Otwarta na nowe doświadczenia. Chcę poznać kogoś, kto wie czego chce.
+                        </p>
+                        <a href="https://your-affiliate-link.com" class="btn btn-primary" style="width: 100%;">
+                            Wyślij wiadomość
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile 3 -->
+                <div class="profile-card">
+                    <div style="position: relative;">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Magda" class="profile-image">
+                        <div class="profile-badge">
+                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-name">Magda, 28</div>
+                        </div>
+                        <div class="profile-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Wrocław</span>
+                        </div>
+                        <p class="profile-description">
+                            Pełna energii i chęci do zabawy. Szukam partnera na gorące noce.
+                        </p>
+                        <a href="https://your-affiliate-link.com" class="btn btn-primary" style="width: 100%;">
+                            Wyślij wiadomość
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile 4 -->
+                <div class="profile-card">
+                    <div style="position: relative;">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Ola" class="profile-image">
+                        <div class="profile-badge">
+                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-name">Ola, 25</div>
+                        </div>
+                        <div class="profile-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Gdańsk</span>
+                        </div>
+                        <p class="profile-description">
+                            Zmysłowa i tajemnicza. Lubię romantyczne wieczory, które kończą się namiętnie.
+                        </p>
+                        <a href="https://your-affiliate-link.com" class="btn btn-primary" style="width: 100%;">
+                            Wyślij wiadomość
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile 5 -->
+                <div class="profile-card">
+                    <div style="position: relative;">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Natalia" class="profile-image">
+                        <div class="profile-badge">
+                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-name">Natalia, 27</div>
+                        </div>
+                        <div class="profile-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Poznań</span>
+                        </div>
+                        <p class="profile-description">
+                            Spontaniczna i odważna. Szukam kogoś na dyskretne spotkania bez zobowiązań.
+                        </p>
+                        <a href="https://your-affiliate-link.com" class="btn btn-primary" style="width: 100%;">
+                            Wyślij wiadomość
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile 6 -->
+                <div class="profile-card">
+                    <div style="position: relative;">
+                        <img src="/placeholder.svg?height=300&width=400" alt="Julia" class="profile-image">
+                        <div class="profile-badge">
+                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
+                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-header">
+                            <div class="profile-name">Julia, 23</div>
+                        </div>
+                        <div class="profile-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>Łódź</span>
+                        </div>
+                        <p class="profile-description">
+                            Młoda, piękna i gotowa na przygodę. Chcę poznać kogoś, kto potrafi mnie zaskoczyć.
+                        </p>
+                        <a href="https://your-affiliate-link.com" class="btn btn-primary" style="width: 100%;">
+                            Wyślij wiadomość
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://your-affiliate-link.com" class="btn btn-primary btn-lg">
+                    Zobacz więcej profili
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Twoja przygoda zaczyna się teraz</h2>
+            <p>
+                Dołącz do tysięcy singli, którzy znaleźli to, czego szukali. Rejestracja jest całkowicie darmowa!
+            </p>
+
+            <div class="cta-buttons">
+                <a href="https://your-affiliate-link.com" class="btn btn-white btn-lg">
+                    Zarejestruj się teraz
+                </a>
+                <a href="https://your-affiliate-link.com" class="btn btn-outline-white btn-lg">
+                    Znajdź dopasowanie
+                </a>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3>Tysiące profili</h3>
+                    <p>Znajdź kogoś idealnego dla Ciebie</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                        </svg>
+                    </div>
+                    <h3>100% dyskretne</h3>
+                    <p>Twoje dane są bezpieczne</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                        </svg>
+                    </div>
+                    <h3>Darmowa rejestracja</h3>
+                    <p>Zacznij już dziś bez opłat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--red);">
+                    <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+                </svg>
+                <span style="font-weight: 600;">Pikantnie</span>
+            </div>
+            <p>&copy; 2025 Pikantnie. Wszystkie prawa zastrzeżone.</p>
+            <p style="margin-top: 0.5rem;">Tylko dla osób pełnoletnich (18+)</p>
+        </div>
+    </footer>
+
+    <!-- Chat Notifications Container -->
+    <div class="notifications-container" id="notificationsContainer"></div>
+
+    <script>
+        // Affiliate link - ZMIEŃ NA SWÓJ LINK
+        const AFFILIATE_LINK = 'https://your-affiliate-link.com';
+
+        // Form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = AFFILIATE_LINK;
+        });
+
+        function updateOnlineCount() {
+            const min = 500;
+            const max = 3000;
+            const count = Math.floor(Math.random() * (max - min + 1)) + min;
+            document.getElementById('onlineCount').textContent = count;
+        }
+
+        // Update counter every 10 seconds
+        setInterval(updateOnlineCount, 10000);
+
+        // Chat notifications
+        const notificationProfiles = [
+            {
+                name: 'Karolina',
+                age: 25,
+                message: 'Hej! Widziałam Twój profil i wydajesz się interesujący 😊',
+                image: '/placeholder.svg?height=100&width=100'
+            },
+            {
+                name: 'Martyna',
+                age: 27,
+                message: 'Cześć! Mamy podobne zainteresowania, może pogadamy?',
+                image: '/placeholder.svg?height=100&width=100'
+            },
+            {
+                name: 'Weronika',
+                age: 24,
+                message: 'Witaj! Szukam kogoś do wspólnych przygód 🌟',
+                image: '/placeholder.svg?height=100&width=100'
+            },
+            {
+                name: 'Aleksandra',
+                age: 26,
+                message: 'Hej! Może spotkamy się na kawie? ☕',
+                image: '/placeholder.svg?height=100&width=100'
+            }
+        ];
+
+        let notificationId = 0;
+
+        function showRandomNotification() {
+            const profile = notificationProfiles[Math.floor(Math.random() * notificationProfiles.length)];
+            const distance = Math.floor(Math.random() * 35) + 5;
+            const id = notificationId++;
+
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.id = `notification-${id}`;
+            notification.innerHTML = `
+                <button class="notification-close" onclick="removeNotification(${id})">×</button>
+                <div class="notification-content" onclick="window.location.href='${AFFILIATE_LINK}'">
+                    <img src="${profile.image}" alt="${profile.name}" class="notification-avatar">
+                    <div class="notification-info">
+                        <div class="notification-header">
+                            <span class="notification-name">${profile.name}, ${profile.age}</span>
+                            <span class="notification-badge">ONLINE</span>
+                        </div>
+                        <div class="notification-location">
+                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>${distance} km od Ciebie</span>
+                        </div>
+                        <p class="notification-message">${profile.message}</p>
+                        <button class="notification-button" onclick="window.location.href='${AFFILIATE_LINK}'">
+                            Odpowiedz teraz
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('notificationsContainer').appendChild(notification);
+
+            setTimeout(() => {
+                removeNotification(id);
+            }, 8000);
+        }
+
+        function removeNotification(id) {
+            const notification = document.getElementById(`notification-${id}`);
+            if (notification) {
+                notification.style.animation = 'slideIn 0.3s ease-out reverse';
+                setTimeout(() => {
+                    notification.remove();
+                }, 300);
+            }
+        }
+
+        setTimeout(showRandomNotification, 3000);
+
+        setInterval(() => {
+            showRandomNotification();
+        }, Math.random() * 10000 + 15000);
+    </script>
+</body>
+</html>
