@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikantnie24 - Gdzie pikanteria spotyka ekskluzywność</title>
-    <meta name="description" content="Odkryj świat dyskretnych spotkań. Tylko dla wybranych.">
+    <title>Pikantnie24 - Znajdź swoją drugą połówkę</title>
+    <meta name="description" content="Poznaj nowych ludzi i znajdź swoją drugą połówkę. Dołącz do tysięcy szczęśliwych par!">
     <style>
         * {
             margin: 0;
@@ -12,41 +12,24 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-dark: #0a0a0a;
-            --bg-card: #1a1a1a;
-            --text-white: #ffffff;
-            --text-muted: #9ca3af;
-            --red: #dc2626;
-            --red-dark: #991b1b;
-            --gold: #FFD700;
-            --border: #2a2a2a;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a0a 100%);
-            color: var(--text-white);
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 100%);
+            color: #1a1a1a;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
-        /* Gold text */
-        .gold-text {
-            color: var(--gold);
-        }
-
-        /* Button */
+        /* Buttons */
         .btn {
             display: inline-block;
-            padding: 0.75rem 2rem;
-            border-radius: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 2rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
@@ -56,113 +39,79 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            color: var(--text-white);
-            border: 2px solid var(--gold);
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+            background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
+            color: white;
+            box-shadow: 0 4px 14px rgba(255, 23, 68, 0.4);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
+            box-shadow: 0 6px 20px rgba(255, 23, 68, 0.6);
             transform: translateY(-2px);
         }
 
         .btn-outline {
-            background: transparent;
-            color: var(--text-white);
-            border: 2px solid var(--gold);
+            background: white;
+            color: #ff1744;
+            border: 2px solid #ff1744;
         }
 
         .btn-outline:hover {
-            background: var(--gold);
-            color: var(--bg-dark);
-        }
-
-        .btn-lg {
-            padding: 1rem 2.5rem;
-            font-size: 1.125rem;
+            background: #ff1744;
+            color: white;
         }
 
         /* Hero Section */
         .hero {
-            padding: 4rem 0;
+            padding: 4rem 0 3rem;
             text-align: center;
-            background: radial-gradient(circle at 50% 120%, rgba(220, 38, 38, 0.15), transparent);
-            position: relative;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Added erotic silhouette image */
-        .hero-silhouette {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 2rem;
-            opacity: 0.6;
         }
 
         .logo {
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;
             margin-bottom: 2rem;
         }
 
         .logo-icon {
-            width: 4rem;
-            height: 4rem;
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.5);
-            border: 2px solid var(--gold);
+            box-shadow: 0 4px 14px rgba(255, 23, 68, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .logo-text .highlight {
+            color: #ff1744;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
 
+        .hero h1 .highlight {
+            color: #ff1744;
+        }
+
         .hero p {
             font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            max-width: 800px;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        /* Added online counter */
-        .online-counter {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--bg-card);
-            border: 2px solid var(--gold);
-            border-radius: 2rem;
-            padding: 0.5rem 1.5rem;
-            margin-bottom: 2rem;
-            font-size: 0.875rem;
-        }
-
-        .online-dot {
-            width: 0.5rem;
-            height: 0.5rem;
-            background: #22c55e;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
         }
 
         .hero-buttons {
@@ -173,87 +122,36 @@
             margin-bottom: 3rem;
         }
 
-        .hero-stats {
-            display: flex;
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        .hero-stat {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        /* Form Section */
-        .form-section {
-            padding: 4rem 0;
-        }
-
-        .form-card {
-            max-width: 500px;
+            max-width: 900px;
             margin: 0 auto;
-            background: var(--bg-card);
-            border: 2px solid var(--gold);
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.1);
+            padding: 2rem 0;
         }
 
-        .form-card h2 {
+        .stat {
             text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff1744;
             margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        .form-card p {
-            text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid var(--border);
-            border-radius: 0.5rem;
-            background: var(--bg-dark);
-            color: var(--text-white);
+        .stat-label {
             font-size: 1rem;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        .form-disclaimer {
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-top: 1rem;
+            color: #666;
         }
 
         /* Profiles Section */
         .profiles-section {
             padding: 4rem 0;
-            background: var(--bg-card);
+            background: white;
         }
 
         .section-header {
@@ -262,33 +160,33 @@
         }
 
         .section-header h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .section-header p {
             font-size: 1.125rem;
-            color: var(--text-muted);
+            color: #666;
         }
 
         .profiles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .profile-card {
-            background: var(--bg-dark);
-            border: 2px solid var(--border);
+            background: white;
             border-radius: 1rem;
             overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
         }
 
         .profile-card:hover {
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             transform: translateY(-4px);
         }
 
@@ -296,21 +194,6 @@
             width: 100%;
             height: 300px;
             object-fit: cover;
-        }
-
-        .profile-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.5);
-            border: 2px solid var(--gold);
         }
 
         .profile-content {
@@ -329,249 +212,121 @@
             font-weight: 700;
         }
 
+        .profile-age {
+            color: #666;
+        }
+
         .profile-location {
             display: flex;
             align-items: center;
             gap: 0.25rem;
-            color: var(--text-muted);
+            color: #666;
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
 
-        .profile-description {
-            color: var(--text-muted);
+        .profile-bio {
+            color: #666;
             margin-bottom: 1.5rem;
             font-size: 0.875rem;
         }
 
-        /* CTA Section */
-        .cta-section {
+        /* Features Section */
+        .features-section {
             padding: 4rem 0;
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            color: var(--text-white);
-            text-align: center;
-            border-top: 2px solid var(--gold);
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
-
-        .btn-white {
-            background: var(--text-white);
-            color: var(--red);
-            border: 2px solid var(--gold);
-        }
-
-        .btn-white:hover {
-            background: var(--gold);
-            color: var(--bg-dark);
-        }
-
-        .btn-outline-white {
-            background: transparent;
-            color: var(--text-white);
-            border: 2px solid var(--gold);
-        }
-
-        .btn-outline-white:hover {
-            background: var(--text-white);
-            color: var(--red);
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe4e9 100%);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
         .feature {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .feature-icon {
             width: 4rem;
             height: 4rem;
+            background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
-            border: 2px solid var(--gold);
+            margin: 0 auto 1rem;
         }
 
         .feature h3 {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .feature p {
+            color: #666;
             font-size: 0.875rem;
-            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .btn-white {
+            background: white;
+            color: #ff1744;
+        }
+
+        .btn-white:hover {
+            background: #f5f5f5;
         }
 
         /* Footer */
         .footer {
             padding: 2rem 0;
             text-align: center;
-            color: var(--text-muted);
+            background: white;
+            color: #666;
             font-size: 0.875rem;
-            border-top: 1px solid var(--border);
         }
 
-        .footer-brand {
-            display: flex;
+        .footer-logo {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 0.5rem;
             margin-bottom: 1rem;
         }
 
-        /* Chat Notifications */
-        .notifications-container {
-            position: fixed;
-            bottom: 1rem;
-            right: 1rem;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 400px;
-        }
-
-        .notification {
-            background: var(--bg-card);
-            border: 2px solid var(--gold);
-            border-radius: 1rem;
-            padding: 1rem;
-            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2);
-            animation: slideIn 0.3s ease-out;
-            position: relative;
-            cursor: pointer;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .notification-close {
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 1.25rem;
+        /* Icons */
+        .icon {
             width: 1.5rem;
             height: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.2s;
         }
 
-        .notification-close:hover {
-            background: var(--bg-dark);
-            color: var(--text-white);
-        }
-
-        .notification-content {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .notification-avatar {
-            width: 3.5rem;
-            height: 3.5rem;
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .notification-info {
-            flex: 1;
-        }
-
-        .notification-header {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .notification-name {
-            font-weight: 600;
-        }
-
-        .notification-badge {
-            background: #22c55e;
-            color: var(--text-white);
-            padding: 0.125rem 0.5rem;
-            border-radius: 1rem;
-            font-size: 0.625rem;
-            font-weight: 600;
-        }
-
-        .notification-location {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            margin-bottom: 0.5rem;
-        }
-
-        .notification-message {
-            font-size: 0.875rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .notification-button {
-            width: 100%;
-            padding: 0.5rem;
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            color: var(--text-white);
-            border: 2px solid var(--gold);
-            border-radius: 0.5rem;
-            font-weight: 600;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .notification-button:hover {
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+        .icon-sm {
+            width: 1rem;
+            height: 1rem;
         }
 
         /* Responsive */
@@ -580,180 +335,83 @@
                 font-size: 2rem;
             }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
             .section-header h2 {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
 
             .cta-section h2 {
                 font-size: 2rem;
             }
 
-            .notifications-container {
-                max-width: calc(100vw - 2rem);
-                right: 1rem;
-                left: 1rem;
-            }
-
             .profiles-grid {
                 grid-template-columns: 1fr;
             }
-
-            .hero-silhouette {
-                width: 150px;
-                height: 150px;
-            }
-        }
-
-        /* Icons */
-        .icon {
-            width: 1.5rem;
-            height: 1.5rem;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .icon-sm {
-            width: 1rem;
-            height: 1rem;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+     Hero Section 
     <section class="hero">
-        <div class="container hero-content">
-            <!-- Changed to female silhouette outline instead of photo -->
-            <div class="mb-8 w-48 h-48 md:w-64 md:h-64 relative opacity-60 mx-auto">
-                <svg viewBox="0 0 200 200" style="width: 100%; height: 100%;" fill="none" stroke="#dc2626" stroke-width="3">
-                    <path d="M100 30 C80 30, 70 40, 70 60 C70 75, 75 85, 85 90 L80 120 L70 180 L80 180 L85 140 L95 140 L95 180 L105 180 L105 140 L115 140 L120 180 L130 180 L120 120 L115 90 C125 85, 130 75, 130 60 C130 40, 120 30, 100 30 Z" />
-                </svg>
-            </div>
-            
-            <!-- Updated logo with chili pepper SVG and added 24 -->
+        <div class="container">
+             Logo with flame icon 
             <div class="logo">
                 <div class="logo-icon">
                     <svg class="icon" fill="white" viewBox="0 0 24 24">
-                        <path d="M12 2c-1 0-2 .5-2.5 1.5-.5.5-.5 1-.5 1.5 0 1 .5 2 1.5 2.5L9 12c-.5 2-1 4-1 6 0 2.5 2 4.5 4.5 4.5S17 20.5 17 18c0-2-.5-4-1-6l-1.5-4.5c1-.5 1.5-1.5 1.5-2.5 0-.5 0-1-.5-1.5C15 2.5 14 2 13 2h-1z"/>
+                        <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
                     </svg>
                 </div>
-                <span style="font-size: 1.875rem; font-weight: 700; color: var(--text-white);">
-                    Pikantnie<span class="gold-text">24</span>
-                </span>
+                <span class="logo-text">Pikantnie<span class="highlight">24</span></span>
             </div>
 
             <h1>
-                <span style="background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Pikantnie</span> i <span class="gold-text">ekskluzywnie</span>
+                Znajdź swoją <span class="highlight">drugą połówkę</span>
             </h1>
 
             <p>
-                Odkryj świat dyskretnych spotkań. Tylko dla wybranych.
+                Poznaj nowych ludzi i zacznij swoją przygodę z miłością. Dołącz do tysięcy szczęśliwych par!
             </p>
 
-            <!-- Added online counter -->
-            <div class="online-counter">
-                <span class="online-dot"></span>
-                <span><strong id="onlineCount">1847</strong> osób online teraz</span>
-            </div>
-
             <div class="hero-buttons">
-                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary btn-lg">Uzyskaj dostęp</a>
-                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-outline btn-lg">Odkryj więcej</a>
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary">Zarejestruj się</a>
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-outline">Dołącz teraz</a>
             </div>
 
-            <!-- Added 24/7 availability message -->
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--gold);">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" stroke-width="2"/>
-                        <path d="M12 6v6l4 2"/>
-                    </svg>
-                    <span class="gold-text" style="font-weight: 600;">Dostępne 24/7</span>
+             Stats 
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">2M+</div>
+                    <div class="stat-label">Użytkowników</div>
                 </div>
-                <div class="hero-stat">
-                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--gold);">
-                        <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-                    </svg>
-                    <span>Weryfikowani członkowie</span>
+                <div class="stat">
+                    <div class="stat-number">500K+</div>
+                    <div class="stat-label">Dopasowań</div>
                 </div>
-                <div class="hero-stat">
-                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--red);">
-                        <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                    </svg>
-                    <span>Dyskretnie i <span class="gold-text">ekskluzywnie</span></span>
-                </div>
-                <div class="hero-stat">
-                    <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--gold);">
-                        <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-                    </svg>
-                    <span>Tylko dla wybranych</span>
+                <div class="stat">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Zadowolenia</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Registration Form -->
-    <section class="form-section">
-        <div class="container">
-            <div class="form-card">
-                <h2>Rozpocznij swoją przygodę</h2>
-                <p>Wypełnij formularz i poznaj kogoś wyjątkowego już dziś</p>
-
-                <form id="registrationForm">
-                    <div class="form-group">
-                        <label for="name">Imię</label>
-                        <input type="text" id="name" placeholder="Twoje imię" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="age">Wiek</label>
-                        <input type="number" id="age" placeholder="Twój wiek" min="18" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="twoj@email.com" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.125rem;">
-                        Dołącz teraz
-                    </button>
-
-                    <p class="form-disclaimer">
-                        Klikając "Dołącz teraz" akceptujesz nasze warunki użytkowania i potwierdzasz, że masz ukończone 18 lat
-                    </p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Profiles Section -->
+     Profiles Section 
     <section class="profiles-section">
         <div class="container">
             <div class="section-header">
-                <h2>
-                    Poznaj <span style="background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">pikantne</span> single w Twojej okolicy
-                </h2>
+                <h2>Poznaj nowych ludzi</h2>
                 <p>Setki atrakcyjnych osób czeka na Ciebie. Rozpocznij rozmowę już teraz!</p>
             </div>
 
             <div class="profiles-grid">
-                <!-- Profile 1 -->
+                 Profile 1 
                 <div class="profile-card">
-                    <div style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop&crop=faces" alt="Anna" class="profile-image">
-                        <div class="profile-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop&crop=faces" alt="Anna" class="profile-image">
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-name">Anna, 26</div>
+                            <div>
+                                <span class="profile-name">Anna</span>
+                                <span class="profile-age">, 26</span>
+                            </div>
                         </div>
                         <div class="profile-location">
                             <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
@@ -761,8 +419,8 @@
                             </svg>
                             <span>Warszawa</span>
                         </div>
-                        <p class="profile-description">
-                            Szukam kogoś do gorących chwil i niezapomnianych spotkań. Lubię spontaniczność i pasję.
+                        <p class="profile-bio">
+                            Uwielbiam podróże, dobrą kawę i długie spacery. Szukam kogoś do wspólnych przygód.
                         </p>
                         <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary" style="width: 100%;">
                             Wyślij wiadomość
@@ -770,19 +428,15 @@
                     </div>
                 </div>
 
-                <!-- Profile 2 -->
+                 Profile 2 
                 <div class="profile-card">
-                    <div style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=300&fit=crop&crop=faces" alt="Kasia" class="profile-image">
-                        <div class="profile-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=300&fit=crop&crop=faces" alt="Kasia" class="profile-image">
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-name">Kasia, 24</div>
+                            <div>
+                                <span class="profile-name">Kasia</span>
+                                <span class="profile-age">, 24</span>
+                            </div>
                         </div>
                         <div class="profile-location">
                             <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
@@ -790,8 +444,8 @@
                             </svg>
                             <span>Kraków</span>
                         </div>
-                        <p class="profile-description">
-                            Otwarta na nowe doświadczenia. Chcę poznać kogoś, kto wie czego chce.
+                        <p class="profile-bio">
+                            Miłośniczka sztuki i dobrego jedzenia. Chcę poznać kogoś wyjątkowego.
                         </p>
                         <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary" style="width: 100%;">
                             Wyślij wiadomość
@@ -799,19 +453,15 @@
                     </div>
                 </div>
 
-                <!-- Profile 3 -->
+                 Profile 3 
                 <div class="profile-card">
-                    <div style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop&crop=faces" alt="Magda" class="profile-image">
-                        <div class="profile-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop&crop=faces" alt="Magda" class="profile-image">
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-name">Magda, 28</div>
+                            <div>
+                                <span class="profile-name">Magda</span>
+                                <span class="profile-age">, 28</span>
+                            </div>
                         </div>
                         <div class="profile-location">
                             <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
@@ -819,8 +469,8 @@
                             </svg>
                             <span>Wrocław</span>
                         </div>
-                        <p class="profile-description">
-                            Pełna energii i chęci do zabawy. Szukam partnera na gorące noce.
+                        <p class="profile-bio">
+                            Aktywna, pełna energii i zawsze uśmiechnięta. Szukam partnera do życia.
                         </p>
                         <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary" style="width: 100%;">
                             Wyślij wiadomość
@@ -828,19 +478,15 @@
                     </div>
                 </div>
 
-                <!-- Profile 4 -->
+                 Profile 4 
                 <div class="profile-card">
-                    <div style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=faces" alt="Ola" class="profile-image">
-                        <div class="profile-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop&crop=faces" alt="Ola" class="profile-image">
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-name">Ola, 25</div>
+                            <div>
+                                <span class="profile-name">Ola</span>
+                                <span class="profile-age">, 25</span>
+                            </div>
                         </div>
                         <div class="profile-location">
                             <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
@@ -848,8 +494,8 @@
                             </svg>
                             <span>Gdańsk</span>
                         </div>
-                        <p class="profile-description">
-                            Zmysłowa i tajemnicza. Lubię romantyczne wieczory, które kończą się namiętnie.
+                        <p class="profile-bio">
+                            Romantyczna dusza z pasją do muzyki. Chcę znaleźć prawdziwą miłość.
                         </p>
                         <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary" style="width: 100%;">
                             Wyślij wiadomość
@@ -857,19 +503,15 @@
                     </div>
                 </div>
 
-                <!-- Profile 5 -->
+                 Profile 5 
                 <div class="profile-card">
-                    <div style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=300&fit=crop&crop=faces" alt="Natalia" class="profile-image">
-                        <div class="profile-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1529626455594-472988babdf9?w=400&h=300&fit=crop&crop=faces" alt="Natalia" class="profile-image">
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-name">Natalia, 27</div>
+                            <div>
+                                <span class="profile-name">Natalia</span>
+                                <span class="profile-age">, 27</span>
+                            </div>
                         </div>
                         <div class="profile-location">
                             <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
@@ -877,8 +519,8 @@
                             </svg>
                             <span>Poznań</span>
                         </div>
-                        <p class="profile-description">
-                            Spontaniczna i odważna. Szukam kogoś na dyskretne spotkania bez zobowiązań.
+                        <p class="profile-bio">
+                            Spontaniczna i otwarta na nowe doświadczenia. Poznajmy się!
                         </p>
                         <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary" style="width: 100%;">
                             Wyślij wiadomość
@@ -886,19 +528,15 @@
                     </div>
                 </div>
 
-                <!-- Profile 6 -->
+                 Profile 6 
                 <div class="profile-card">
-                    <div style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=300&fit=crop&crop=faces" alt="Julia" class="profile-image">
-                        <div class="profile-badge">
-                            <svg class="icon-sm" fill="white" viewBox="0 0 24 24">
-                                <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=300&fit=crop&crop=faces" alt="Julia" class="profile-image">
                     <div class="profile-content">
                         <div class="profile-header">
-                            <div class="profile-name">Julia, 23</div>
+                            <div>
+                                <span class="profile-name">Julia</span>
+                                <span class="profile-age">, 23</span>
+                            </div>
                         </div>
                         <div class="profile-location">
                             <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
@@ -906,8 +544,8 @@
                             </svg>
                             <span>Łódź</span>
                         </div>
-                        <p class="profile-description">
-                            Młoda, piękna i gotowa na przygodę. Chcę poznać kogoś, kto potrafi mnie zaskoczyć.
+                        <p class="profile-bio">
+                            Młoda, energiczna i gotowa na przygodę. Może to będziesz Ty?
                         </p>
                         <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary" style="width: 100%;">
                             Wyślij wiadomość
@@ -917,184 +555,88 @@
             </div>
 
             <div style="text-align: center;">
-                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary btn-lg">
-                    Zobacz więcej profili
-                </a>
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-primary">Zobacz więcej profili</a>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+     Features Section 
+    <section class="features-section">
         <div class="container">
-            <h2>Twoja przygoda zaczyna się teraz</h2>
-            <p>
-                Dołącz do tysięcy singli, którzy znaleźli to, czego szukali. Rejestracja jest całkowicie darmowa!
-            </p>
-
-            <div class="cta-buttons">
-                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-white btn-lg">
-                    Zarejestruj się teraz
-                </a>
-                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-outline-white btn-lg">
-                    Znajdź dopasowanie
-                </a>
+            <div class="section-header">
+                <h2>Dlaczego Pikantnie24?</h2>
+                <p>Dołącz do najlepszego portalu randkowego w Polsce</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature">
                     <div class="feature-icon">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        <svg class="icon" fill="white" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.62 5 8.5 5 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
                         </svg>
                     </div>
                     <h3>Tysiące profili</h3>
-                    <p>Znajdź kogoś idealnego dla Ciebie</p>
+                    <p>Znajdź kogoś idealnego dla Ciebie spośród tysięcy zweryfikowanych użytkowników</p>
                 </div>
 
                 <div class="feature">
                     <div class="feature-icon">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="icon" fill="white" viewBox="0 0 24 24">
                             <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                         </svg>
                     </div>
-                    <h3>100% dyskretne</h3>
-                    <p>Twoje dane są bezpieczne</p>
+                    <h3>Bezpieczeństwo</h3>
+                    <p>Twoje dane są chronione najwyższymi standardami bezpieczeństwa</p>
                 </div>
 
                 <div class="feature">
                     <div class="feature-icon">
-                        <svg class="icon" fill="currentColor" viewBox="0 0 24 24">
+                        <svg class="icon" fill="white" viewBox="0 0 24 24">
                             <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
                         </svg>
                     </div>
-                    <h3>Darmowa rejestracja</h3>
-                    <p>Zacznij już dziś bez opłat</p>
+                    <h3>Prawdziwe dopasowania</h3>
+                    <p>Nasz algorytm pomoże Ci znaleźć idealnego partnera</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg class="icon" fill="white" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="white" fill="none" stroke-width="2"/>
+                            <path d="M12 6v6l4 2" stroke="white" fill="none" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Dostępne 24/7</h3>
+                    <p>Poznawaj nowych ludzi o każdej porze dnia i nocy</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+     CTA Section 
+    <section class="cta-section">
+        <div class="container">
+            <h2>Gotowy na nową przygodę?</h2>
+            <p>Dołącz do tysięcy szczęśliwych par. Rejestracja jest całkowicie darmowa!</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-white">Zarejestruj się teraz</a>
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="btn btn-outline" style="border-color: white; color: white;">Znajdź dopasowanie</a>
+            </div>
+        </div>
+    </section>
+
+     Footer 
     <footer class="footer">
         <div class="container">
-            <div class="footer-brand">
-                <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24" style="color: var(--red);">
-                    <path d="M12 2c-1 0-2 .5-2.5 1.5-.5.5-.5 1-.5 1.5 0 1 .5 2 1.5 2.5L9 12c-.5 2-1 4-1 6 0 2.5 2 4.5 4.5 4.5S17 20.5 17 18c0-2-.5-4-1-6l-1.5-4.5c1-.5 1.5-1.5 1.5-2.5 0-.5 0-1-.5-1.5C15 2.5 14 2 13 2h-1z"/>
+            <div class="footer-logo">
+                <svg class="icon-sm" fill="#ff1744" viewBox="0 0 24 24">
+                    <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
                 </svg>
-                <span style="font-weight: 600;">Pikantnie<span class="gold-text">24</span></span>
+                <span style="font-weight: 600;">Pikantnie<span style="color: #ff1744;">24</span></span>
             </div>
             <p>&copy; 2025 Pikantnie24. Wszystkie prawa zastrzeżone.</p>
             <p style="margin-top: 0.5rem;">Tylko dla osób pełnoletnich (18+)</p>
         </div>
     </footer>
-
-    <!-- Chat Notifications Container -->
-    <div class="notifications-container" id="notificationsContainer"></div>
-
-    <script>
-        // Affiliate link - ZMIEŃ NA SWÓJ LINK
-        const AFFILIATE_LINK = 'https://radarkobiet.pl/link/2821/31651691';
-
-        // Form submission
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = AFFILIATE_LINK;
-        });
-
-        function updateOnlineCount() {
-            const min = 500;
-            const max = 3000;
-            const count = Math.floor(Math.random() * (max - min + 1)) + min;
-            document.getElementById('onlineCount').textContent = count;
-        }
-
-        // Update counter every 10 seconds
-        setInterval(updateOnlineCount, 10000);
-
-        // Chat notifications
-        const notificationProfiles = [
-            {
-                name: 'Karolina',
-                age: 25,
-                message: 'Hej! Widziałam Twój profil i wydajesz się interesujący 😊',
-                image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=faces'
-            },
-            {
-                name: 'Martyna',
-                age: 27,
-                message: 'Cześć! Mamy podobne zainteresowania, może pogadamy?',
-                image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces'
-            },
-            {
-                name: 'Weronika',
-                age: 24,
-                message: 'Witaj! Szukam kogoś do wspólnych przygód 🌟',
-                image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=faces'
-            },
-            {
-                name: 'Aleksandra',
-                age: 26,
-                message: 'Hej! Może spotkamy się na kawie? ☕',
-                image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=faces'
-            }
-        ];
-
-        let notificationId = 0;
-
-        function showRandomNotification() {
-            const profile = notificationProfiles[Math.floor(Math.random() * notificationProfiles.length)];
-            const distance = Math.floor(Math.random() * 35) + 5;
-            const id = notificationId++;
-
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            notification.id = `notification-${id}`;
-            notification.innerHTML = `
-                <button class="notification-close" onclick="removeNotification(${id})">×</button>
-                <div class="notification-content" onclick="window.location.href='${AFFILIATE_LINK}'">
-                    <img src="${profile.image}" alt="${profile.name}" class="notification-avatar">
-                    <div class="notification-info">
-                        <div class="notification-header">
-                            <span class="notification-name">${profile.name}, ${profile.age}</span>
-                            <span class="notification-badge">ONLINE</span>
-                        </div>
-                        <div class="notification-location">
-                            <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>${distance} km od Ciebie</span>
-                        </div>
-                        <p class="notification-message">${profile.message}</p>
-                        <button class="notification-button" onclick="window.location.href='${AFFILIATE_LINK}'">
-                            Odpowiedz teraz
-                        </button>
-                    </div>
-                </div>
-            `;
-
-            document.getElementById('notificationsContainer').appendChild(notification);
-
-            setTimeout(() => {
-                removeNotification(id);
-            }, 8000);
-        }
-
-        function removeNotification(id) {
-            const notification = document.getElementById(`notification-${id}`);
-            if (notification) {
-                notification.style.animation = 'slideIn 0.3s ease-out reverse';
-                setTimeout(() => {
-                    notification.remove();
-                }, 300);
-            }
-        }
-
-        setTimeout(showRandomNotification, 3000);
-
-        setInterval(() => {
-            showRandomNotification();
-        }, Math.random() * 10000 + 15000);
-    </script>
 </body>
 </html>
