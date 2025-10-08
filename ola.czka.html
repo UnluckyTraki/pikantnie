@@ -172,9 +172,8 @@
         }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            display: flex;
+            justify-content: center;
         }
 
         .gallery-item {
@@ -183,16 +182,18 @@
             cursor: pointer;
             transition: transform 0.3s;
             text-decoration: none;
+            max-width: 100%;
+            background: #1a1a24;
         }
 
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
 
         .gallery-item img {
             width: 100%;
-            height: 16rem;
-            object-fit: cover;
+            height: 24rem;
+            object-fit: contain;
             display: block;
         }
 
@@ -220,7 +221,7 @@
             }
 
             .gallery-item img {
-                height: 14rem;
+                height: 20rem;
             }
         }
     </style>
@@ -295,13 +296,9 @@
         <!-- Gallery Section -->
         <div class="gallery-section">
             <h2>Galeria</h2>
-            <!-- Zastąpiono placeholdery prawdziwym zdjęciem -->
             <div class="gallery-grid">
                 <a href="https://radarkobiet.pl/link/2821/31651691" class="gallery-item">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1b9a3bf6-e4c2-42c9-ac1c-408e8e8e9c14%20(1)-Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks.jpeg" alt="Galeria 1">
-                </a>
-                <a href="https://radarkobiet.pl/link/2821/31651691" class="gallery-item">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1b9a3bf6-e4c2-42c9-ac1c-408e8e8e9c14%20(1)-Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks.jpeg" alt="Galeria 2">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1b9a3bf6-e4c2-42c9-ac1c-408e8e8e9c14%20%281%29.jfif-sKiRsMaTWb7kw7ppeFKfmNxA7d9IUo.jpeg" alt="Galeria">
                 </a>
             </div>
         </div>
