@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola.czka - Poznaj mnie bliżej</title>
+    <meta name="description" content="Cześć, jestem Ola. Poznaj mnie bliżej.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-image-wrapper {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Poprawiono rozmiar i obramowanie avatara */
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #ec4899;
+            box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Poprawiono pozycjonowanie badge'a */
+        .profile-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(236, 72, 153, 0.7);
+            border: 3px solid #0a0a0f;
+        }
+
+        /* Poprawiono typografię nagłówka */
+        .profile-name {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        .profile-bio {
+            text-align: center;
+            font-size: 1.125rem;
+            color: #e5e7eb;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .profile-tags {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Poprawiono style przycisków CTA */
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(135deg, #1f1f28 0%, #2a2a35 100%);
+            border: 1px solid rgba(236, 72, 153, 0.2);
+            border-radius: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #2a2a35 0%, #35354a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+            border-color: rgba(236, 72, 153, 0.4);
+        }
+
+        .cta-button-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Poprawiono rozmiar i style ikon */
+        .cta-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(236, 72, 153, 0.15);
+            border-radius: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid rgba(236, 72, 153, 0.3);
+        }
+
+        .cta-icon svg {
+            width: 26px;
+            height: 26px;
+            color: #ec4899;
+        }
+
+        .cta-text {
+            text-align: left;
+            flex: 1;
+        }
+
+        /* Poprawiono typografię tekstów CTA */
+        .cta-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: #ffffff;
+        }
+
+        .cta-subtitle {
+            font-size: 0.875rem;
+            color: #9ca3af;
+            font-weight: 400;
+        }
+
+        .cta-arrow {
+            width: 24px;
+            height: 24px;
+            color: #6b7280;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .cta-button:hover .cta-arrow {
+            transform: translateX(4px);
+            color: #ec4899;
+        }
+
+        .gallery-section {
+            margin-bottom: 3rem;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        /* Poprawiono style galerii */
+        .gallery-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: 2px solid rgba(236, 72, 153, 0.2);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            border-color: rgba(236, 72, 153, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 640px) {
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .profile-badge {
+                width: 40px;
+                height: 40px;
+            }
+
+            .profile-name {
+                font-size: 2rem;
+            }
+
+            .gallery-item img {
+                height: 220px;
+            }
+
+            .cta-icon {
+                width: 48px;
+                height: 48px;
+            }
+
+            .cta-icon svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-image-wrapper">
+                <img 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=faces" 
+                    alt="Ola.czka" 
+                    class="profile-image"
+                >
+                <div class="profile-badge">
+                    <svg fill="white" viewBox="0 0 24 24" style="width: 22px; height: 22px;">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="profile-name">Ola.czka</h1>
+            <p class="profile-bio">Cześć, jestem Ola, poznaj mnie bliżej ❤️</p>
+            <p class="profile-tags">Twórczyni treści • Model • Influencer</p>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://radarkobiet.pl/link/2821/31651691" class="cta-button">
+                <div class="cta-button-content">
+                    <div class="cta-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <div class="cta-text">
+                        <div class="cta-title">Moje zdjęcia i filmy</div>
+                        <div class="cta-subtitle">Ekskluzywna galeria</div>
+                    </div>
+                </div>
+                <svg class="cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+
+            <a href="https://radarkobiet.pl/link/2821/31651691" class="cta-button">
+                <div class="cta-button-content">
+                    <div class="cta-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                    <div class="cta-text">
+                        <div class="cta-title">Kontakt ze mną</div>
+                        <div class="cta-subtitle">Napisz do mnie</div>
+                    </div>
+                </div>
+                <svg class="cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="gallery-title">Galeria</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="window.location.href='https://radarkobiet.pl/link/2821/31651691'">
+                    <img 
+                        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=500&fit=crop&crop=faces" 
+                        alt="Gallery 1"
+                    >
+                </div>
+                <div class="gallery-item" onclick="window.location.href='https://radarkobiet.pl/link/2821/31651691'">
+                    <img 
+                        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop&crop=faces" 
+                        alt="Gallery 2"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Ola.czka. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </div>
+</body>
+</html>
