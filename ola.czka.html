@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ola.czka - Poznaj mnie bliżej</title>
-    <meta name="description" content="Cześć, jestem Ola. Poznaj mnie bliżej.">
+    <title>Ola.czka - Profil</title>
+    <meta name="description" content="Poznaj Olę bliżej. Twórczyni treści, model i influencer.">
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: #0a0a0f;
-            color: #ffffff;
+            color: white;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -23,9 +23,10 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 3rem 1rem;
+            padding: 3rem 1.5rem;
         }
 
+        /* Profile Header */
         .profile-header {
             display: flex;
             flex-direction: column;
@@ -33,26 +34,26 @@
             margin-bottom: 3rem;
         }
 
-        .profile-image-wrapper {
+        .avatar-wrapper {
             position: relative;
             margin-bottom: 1.5rem;
         }
 
-        .profile-image {
-            width: 160px;
-            height: 160px;
+        .avatar {
+            width: 10rem;
+            height: 10rem;
             border-radius: 50%;
             border: 4px solid #ec4899;
             box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
             object-fit: cover;
         }
 
-        .profile-badge {
+        .badge {
             position: absolute;
-            bottom: 8px;
-            right: 8px;
-            width: 40px;
-            height: 40px;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            width: 2.5rem;
+            height: 2.5rem;
             background: #ec4899;
             border-radius: 50%;
             display: flex;
@@ -61,25 +62,33 @@
             box-shadow: 0 4px 14px rgba(236, 72, 153, 0.6);
         }
 
-        .profile-name {
+        .badge svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .profile-title {
+            text-align: center;
+        }
+
+        .profile-title h1 {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
-        .profile-bio {
-            text-align: center;
+        .profile-title .tagline {
             font-size: 1.125rem;
             color: #d1d5db;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
-        .profile-tags {
-            text-align: center;
+        .profile-title .subtitle {
             font-size: 0.875rem;
             color: #9ca3af;
         }
 
+        /* CTA Buttons */
         .cta-buttons {
             display: flex;
             flex-direction: column;
@@ -87,35 +96,33 @@
             margin-bottom: 3rem;
         }
 
-        .cta-button {
+        .cta-card {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 1.5rem;
             background: linear-gradient(135deg, #1f1f28 0%, #2a2a35 100%);
-            border: none;
             border-radius: 1rem;
-            color: #ffffff;
             text-decoration: none;
+            color: white;
             transition: all 0.3s;
-            cursor: pointer;
         }
 
-        .cta-button:hover {
+        .cta-card:hover {
             background: linear-gradient(135deg, #2a2a35 0%, #35354a 100%);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
         }
 
-        .cta-button-content {
+        .cta-content {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
         .cta-icon {
-            width: 48px;
-            height: 48px;
+            width: 3rem;
+            height: 3rem;
             background: rgba(236, 72, 153, 0.2);
             border-radius: 0.75rem;
             display: flex;
@@ -125,45 +132,42 @@
         }
 
         .cta-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 1.5rem;
+            height: 1.5rem;
             color: #ec4899;
         }
 
-        .cta-text {
-            text-align: left;
-        }
-
-        .cta-title {
+        .cta-text h3 {
             font-size: 1.125rem;
             font-weight: 700;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.125rem;
         }
 
-        .cta-subtitle {
+        .cta-text p {
             font-size: 0.875rem;
             color: #9ca3af;
         }
 
         .cta-arrow {
-            width: 24px;
-            height: 24px;
+            width: 1.5rem;
+            height: 1.5rem;
             color: #9ca3af;
             transition: transform 0.3s;
         }
 
-        .cta-button:hover .cta-arrow {
-            transform: translateX(4px);
+        .cta-card:hover .cta-arrow {
+            transform: translateX(0.25rem);
         }
 
+        /* Gallery Section */
         .gallery-section {
             margin-bottom: 3rem;
         }
 
-        .gallery-title {
-            text-align: center;
+        .gallery-section h2 {
             font-size: 1.5rem;
             font-weight: 700;
+            text-align: center;
             margin-bottom: 1.5rem;
         }
 
@@ -178,6 +182,7 @@
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.3s;
+            text-decoration: none;
         }
 
         .gallery-item:hover {
@@ -186,57 +191,72 @@
 
         .gallery-item img {
             width: 100%;
-            height: 250px;
+            height: 16rem;
             object-fit: cover;
+            display: block;
         }
 
+        /* Footer */
         .footer {
             text-align: center;
+            padding: 2rem 0;
             color: #6b7280;
             font-size: 0.875rem;
-            padding: 2rem 0;
         }
 
+        /* Responsive */
         @media (max-width: 640px) {
-            .profile-image {
-                width: 140px;
-                height: 140px;
+            .container {
+                padding: 2rem 1rem;
             }
 
-            .profile-name {
+            .profile-title h1 {
                 font-size: 1.75rem;
             }
 
+            .avatar {
+                width: 8rem;
+                height: 8rem;
+            }
+
             .gallery-item img {
-                height: 200px;
+                height: 14rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Profile Header -->
         <div class="profile-header">
-            <div class="profile-image-wrapper">
-                <img 
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=faces" 
-                    alt="Ola.czka" 
-                    class="profile-image"
-                >
-                <div class="profile-badge">
-                    <svg fill="white" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
-                        <path d="M8.5 2c-1.82 0-3.53.5-5 1.35C2.04 4.6 1 6.62 1 8.5 1 11.38 3 13.5 6 15.5c2 1.33 4 2 6 2s4-.67 6-2c3-2 5-4.12 5-7 0-1.88-1.04-3.9-2.5-5.15C18.03 2.5 16.32 2 14.5 2c-1.38 0-2.64.43-3.5 1.09C10.14 2.43 8.88 2 7.5 2h1z"/>
+            <div class="avatar-wrapper">
+                <!-- Użyto wrzuconego zdjęcia użytkownika -->
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/384072539_1038360193973499_9098065869506328495_n-cvy1D7VXEzEGs6Zv4Jee8xcNCT5MEu.jpeg" alt="Ola.czka" class="avatar">
+                <div class="badge">
+                    <svg fill="white" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                     </svg>
                 </div>
             </div>
 
-            <h1 class="profile-name">Ola.czka</h1>
-            <p class="profile-bio">Cześć, jestem Ola, poznaj mnie bliżej ❤️</p>
-            <p class="profile-tags">Twórczyni treści • Model • Influencer</p>
+            <div class="profile-title">
+                <h1>Ola.czka</h1>
+                <!-- Dodano badge "Zweryfikowana" i zmieniono opis -->
+                <p class="tagline" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #3b82f6; color: white; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Zweryfikowana
+                </p>
+                <p class="tagline">Jeśli szukasz nowych wrażeń to chyba wiesz co robić? 🌶️ 😈</p>
+                <p class="subtitle">Twórczyni treści • Model • Influencer</p>
+            </div>
         </div>
 
+        <!-- CTA Buttons -->
         <div class="cta-buttons">
-            <a href="https://radarkobiet.pl/link/2821/31651691" class="cta-button">
-                <div class="cta-button-content">
+            <a href="https://radarkobiet.pl/link/2821/31651691" class="cta-card">
+                <div class="cta-content">
                     <div class="cta-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
@@ -244,8 +264,8 @@
                         </svg>
                     </div>
                     <div class="cta-text">
-                        <div class="cta-title">Moje zdjęcia i filmy</div>
-                        <div class="cta-subtitle">Ekskluzywna galeria</div>
+                        <h3>Moje zdjęcia i filmy</h3>
+                        <p>Ekskluzywna galeria</p>
                     </div>
                 </div>
                 <svg class="cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,16 +273,17 @@
                 </svg>
             </a>
 
-            <a href="https://radarkobiet.pl/link/2821/31651691" class="cta-button">
-                <div class="cta-button-content">
+            <a href="https://radarkobiet.pl/link/2821/31651691" class="cta-card">
+                <div class="cta-content">
                     <div class="cta-icon">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
                         </svg>
                     </div>
                     <div class="cta-text">
-                        <div class="cta-title">Kontakt ze mną</div>
-                        <div class="cta-subtitle">Napisz do mnie</div>
+                        <h3>Kontakt ze mną</h3>
+                        <p>Napisz do mnie</p>
                     </div>
                 </div>
                 <svg class="cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,27 +292,24 @@
             </a>
         </div>
 
+        <!-- Gallery Section -->
         <div class="gallery-section">
-            <h2 class="gallery-title">Galeria</h2>
+            <h2>Galeria</h2>
+            <!-- Zastąpiono placeholdery prawdziwym zdjęciem -->
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="window.location.href='https://radarkobiet.pl/link/2821/31651691'">
-                    <img 
-                        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=500&fit=crop&crop=faces" 
-                        alt="Gallery 1"
-                    >
-                </div>
-                <div class="gallery-item" onclick="window.location.href='https://radarkobiet.pl/link/2821/31651691'">
-                    <img 
-                        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=500&fit=crop&crop=faces" 
-                        alt="Gallery 2"
-                    >
-                </div>
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1b9a3bf6-e4c2-42c9-ac1c-408e8e8e9c14%20(1)-Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks.jpeg" alt="Galeria 1">
+                </a>
+                <a href="https://radarkobiet.pl/link/2821/31651691" class="gallery-item">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1b9a3bf6-e4c2-42c9-ac1c-408e8e8e9c14%20(1)-Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks0Ks.jpeg" alt="Galeria 2">
+                </a>
             </div>
         </div>
 
-        <div class="footer">
+        <!-- Footer -->
+        <footer class="footer">
             <p>&copy; 2025 Ola.czka. Wszystkie prawa zastrzeżone.</p>
-        </div>
+        </footer>
     </div>
 </body>
 </html>
